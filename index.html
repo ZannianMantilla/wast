@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tarjeta de Cumpleaños 🎉</title>
+
+  <!-- Tailwind -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- GSAP -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <!-- Confetti -->
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <!-- Emojis flotantes -->
+  <div class="emoji" style="top:10%;left:15%;">🎂</div>
+  <div class="emoji" style="top:20%;right:20%;">🎁</div>
+  <div class="emoji" style="bottom:15%;left:25%;">🎈</div>
+  <div class="emoji" style="bottom:10%;right:10%;">🎉</div>
+
+  <div id="mainContainer" class="main-center">
+
+    <!-- Tarjeta -->
+    <div class="card group" id="card">
+      <div class="inside">
+        <div class="page border-r border-gray-200">
+          💖 Un buen dia para la mejor y pendeja mujer que existe.
+        </div>
+        <div class="page">
+          🎁 Gracias por existir, adoro ese detalle tuyo sonsa.
+        </div>
+      </div>
+
+      <div class="inner">
+        <div class="front">
+          <img src="foto1.png" alt="Portada" class="cover-img" />
+          <h1 class="text-3xl md:text-4xl font-bold">¡Feliz cumpleaños wasesina! 🎉</h1>
+          <p class="text-sm mt-3 opacity-90">Tiki tiki a la pantalla</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Dinosaurios -->
+    <div id="dinoContainer" class="hidden flex justify-center items-center space-x-8 mt-6">
+      <img id="dinosaurio2" src="dinosaurio2.jpg" alt="Dinosaurio 2" class="dino" />
+      <img id="dinosaurio1" src="dinosaurio1.png" alt="Dinosaurio 1" class="dino" />
+    </div>
+
+    <!-- Escena Bill Cipher -->
+    <div id="billScene" class="hidden flex flex-col items-center justify-center text-center">
+      <img src="bill.gif" alt="Bill Cipher" class="bill-gif" />
+      <div id="textPanel" class="text-panel hidden">
+        <div id="typedText" class="typed-text"></div>
+        <div id="pageIndicator" class="text-sm text-white mt-2 opacity-70"></div>
+      </div>
+    </div>
+
+    <!-- Escena del pastel 🎂 -->
+    <div id="cakeScene" class="hidden flex flex-col items-center justify-center">
+      <div class="tenor-gif-embed mb-4"
+        data-postid="13397875673260883779"
+        data-share-method="host"
+        data-aspect-ratio="0.965863"
+        data-width="300px">
+        <a href="https://tenor.com/view/oiia-oiiaoiia-oiia-oiia-cat-gif-13397875673260883779">Oiia Oiiaoiia GIF</a>
+        from <a href="https://tenor.com/search/oiia-gifs">Oiia GIFs</a>
+      </div>
+
+      <!-- Pastel hecho con CSS -->
+      <div class="cake">
+        <div class="layer layer-bottom"></div>
+        <div class="layer layer-middle"></div>
+        <div class="layer layer-top"></div>
+        <div class="icing"></div>
+        <div class="candle">
+          <div class="flame"></div>
+        </div>
+      </div>
+
+      <h2 id="finalMessage" class="hidden mt-6 text-3xl font-bold text-pink-600">🎉 ¡Feliz cumpleaños, Wast! 🎉</h2>
+    </div>
+
+    <button id="continueBtn" class="mt-10 px-8 py-3 bg-purple-600 text-white rounded-xl shadow-lg hover:bg-purple-700 transition">
+      Continuar
+    </button>
+
+    <!-- Audios -->
+    <audio id="audio1" src="audio1.mp3" preload="auto"></audio>
+  </div>
+
+  <script type="text/javascript" async src="https://tenor.com/embed.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
